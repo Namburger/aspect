@@ -81,8 +81,6 @@ def main():
   cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
   cnts = imutils.grab_contours(cnts)
   cnts, _ = contours.sort_contours(cnts)
-  pixelsPerMetric = None
-  # print(contours)
   
   for i in range(len(cnts)):
     contour = cnts[i]
